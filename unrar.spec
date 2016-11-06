@@ -1,5 +1,5 @@
 Name:     unrar
-Version:  5.4.2
+Version:  5.4.5
 Release:  1%{?dist}
 Summary:  Utility for extracting, testing and viewing RAR archives
 
@@ -19,7 +19,7 @@ viewing the contents of archives created with the RAR archiver version
 1.50 and above.
 
 %prep
-%autosetup -q
+%setup -q -n %{name}
 
 %build
 make %{?_smp_mflags}
@@ -31,5 +31,7 @@ make %{?_smp_mflags}
 /bin/unrar
 
 %changelog
+* Sun Nov 06 2016 Martin Hagstrom <marhag87@gmail.com> 5.4.5-1
+- Update to version 5.4.5
 * Wed Jun 22 2016 Martin Hagstrom <marhag87@gmail.com> 5.4.2-1
 - Initial release
